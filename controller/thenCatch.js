@@ -17,7 +17,6 @@ module.exports = (req, res) => {
     .then((title) => res.send(title)) // send the result back
     .catch((e) =>
       res.status(500).send(
-        ` ${address} - NO RESPONSE  -  Only absolute URLs are supported` || e.message
-      )
+        `${address} - NO RESPONSE  -  Only absolute URLs are supported` || e.message)
     ); // catch possible errors
 };
