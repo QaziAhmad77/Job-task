@@ -21,8 +21,6 @@ module.exports = async (req, res) => {
     return res.status(200).send(title);
   } catch (err) {
     console.log(err);
-    return res.status(500).send(
-      ` ${address} - NO RESPONSE  -  Only absolute URLs are supported` || err.message
-    );
+    return res.status(500).send(` ${address} - NO RESPONSE  -  Only absolute URLs are supported` || err.message);
   }
 };
