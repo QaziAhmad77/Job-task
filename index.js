@@ -1,13 +1,9 @@
 const fetch = require('node-fetch');
 const express = require('express');
-<<<<<<< Updated upstream
-const controller = require('./controller/tryCatch');
-=======
 
-const controller = require('./controller/thenCatch'); // By then and Catch method check this one
-// const controller = require("./controller/tryCatch") // By async and await method check this one
+// const controller = require('./controller/thenCatch'); // By then and Catch method check this one
+const controller = require('./controller/tryCatch'); // By async and await method check this one
 
->>>>>>> Stashed changes
 const app = express();
 const port = 4000;
 
