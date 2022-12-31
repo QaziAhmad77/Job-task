@@ -15,5 +15,10 @@ module.exports = (req, res) => {
     .then((res) => res.text()) // parse response's body as text
     .then((body) => parseTitle(body)) // extract <title> from body
     .then((title) => res.send(title)) // send the result back
-    .catch((e) => res.status(500).end(e.message)); // catch possible errors
+    .catch((e) =>
+      res.status(500).end(
+        ` ${address} - NO RESPONSE  "
+    Only absolute URLs are supported"` || e.message
+      )
+    ); // catch possible errors
 };
