@@ -26,6 +26,6 @@ module.exports = (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).send(`${address} - NO RESPONSE  "Only absolute URLs are supported"` || err.message);
+      res.status(500).send(`${address} - NO RESPONSE - Only absolute URLs are supported` || err.message);
     });
 };
