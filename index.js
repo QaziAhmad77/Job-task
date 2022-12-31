@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const express = require('express');
-const controller = require('./controller/thenCatch');
+const controller = require('./controller/tryCatch');
 const app = express();
 const port = 4000;
 
