@@ -12,7 +12,7 @@ module.exports = (req, res) => {
   };
 
   if (!address) {
-    return res.status(400).end('Missing address query parameter');
+    return res.status(400).send('Missing address query parameter');
   }
 
   fetch(address)

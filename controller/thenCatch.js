@@ -8,7 +8,7 @@ module.exports = (req, res) => {
 
   const { address } = req.query;
   if (!address) {
-    return res.status(400).end('Missing address query parameter');
+    return res.status(400).send('Missing address query parameter');
   }
 
   fetch(address)
@@ -16,7 +16,7 @@ module.exports = (req, res) => {
     .then((body) => parseTitle(body)) // extract <title> from body
     .then((title) => res.send(title)) // send the result back
     .catch((e) =>
-      res.status(500).end(
+      res.status(500).send(
         ` ${address} - NO RESPONSE  "
     Only absolute URLs are supported"` || e.message
       )

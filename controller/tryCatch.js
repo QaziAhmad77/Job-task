@@ -15,7 +15,9 @@ module.exports = async (req, res) => {
     const response = await fetch(address);
     const body = await response.text();
     const title = parseTitle(body);
-    if (!title) return res.status(400).end('Unable to parse title');
+    if (!title) {
+      return res.status(400).send('Unable to parse title');
+    }
     return res.status(200).send(title);
   } catch (err) {
     console.log(err);
