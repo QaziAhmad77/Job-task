@@ -1,10 +1,10 @@
+const fetch = require('node-fetch');
 const express = require('express');
+const controller = require('./controller/index');
 const app = express();
 const port = 4000;
-app.use(express.json());
-const controller = require('./controller/index');
 
-app.use('/I/want/title/?address=google.com', controller);
+app.get('/I/want/title/', controller);
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
