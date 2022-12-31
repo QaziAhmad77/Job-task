@@ -10,5 +10,5 @@ app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
 app.use((req, res) => {
-  res.status(404).send('Not Found');
+  res.status(404).send('404 error Page Not Found');
 });
