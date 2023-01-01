@@ -1,0 +1,30 @@
+<html lang='en'>
+  <head>
+    <title></title>
+    <style>
+      .main1{color: blue;} .main2{ border: 5px solid black; color: rgb(0, 0, 0); }
+    </style>
+  </head>
+  <body>
+    <div class='main1'>
+      <h2>Task details</h2>
+      <h3> Only absolute(must include http://...) URLs are supported. example: address=http://google.com</h3>
+      <h4>For single address you can check this address. (http://localhost:4000/I/want/title/?address=http://google.com)</h4>
+      <h4>For multiple addresses you can check these links. (http://localhost:4000/I/want/title/?address=https://www.youtube.com/&address=https://mail.google.com/&address=http://google.com/)
+      </h4>
+    </div>
+    <h1> Following are the titles of given websites: </h1>
+    <div class='main2'>
+      <h2 style='margin-left: 25px; margin-bottom: 0px'>OUTPUT</h2>
+      <ul>
+        {{#each result}}
+          <li>
+            {{@key}}:
+            {{this}}
+            <br />
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </body>
+</html>
